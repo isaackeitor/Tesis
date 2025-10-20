@@ -1,0 +1,228 @@
+% !TEX root = z-main.tex
+
+El desarrollo e implementación de la aplicación de recorrido con Realidad Aumentada (RA) para el Parque Arqueológico Kaminaljuyú permitió validar la efectividad del diseño centrado en el usuario (UX/UI) aplicado a contextos patrimoniales. A lo largo del proceso se evidenció que la integración entre los elementos técnicos, visuales y funcionales tuvo un impacto directo en la comprensión y el interés del usuario hacia el contenido arqueológico.
+
+\section{Prototipos desarrollados}
+
+\subsection{Prototipos de alta fidelidad}
+
+Durante las fases de diseño se desarrollaron prototipos detallados que definieron la estructura visual y funcional de la aplicación. Estos prototipos sirvieron como base para la implementación técnica y permitieron validar las decisiones de diseño antes del desarrollo.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figuras/resultados/prototipos/Prototipo de alta fidelidad.jpeg}
+    \caption{Prototipo de alta fidelidad - Pantallas principales de la aplicación}
+    \label{fig:prototipo-principal}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figuras/resultados/prototipos/Prototipo de alta fidelidad1.jpeg}
+    \caption{Prototipo de alta fidelidad - Flujo de navegación y menús}
+    \label{fig:prototipo-navegacion}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figuras/resultados/prototipos/Prototipo de alta fidelidad2.jpeg}
+    \caption{Prototipo de alta fidelidad - Interfaz de realidad aumentada}
+    \label{fig:prototipo-ar}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figuras/resultados/prototipos/Prototipo de alta fidelidad3.jpeg}
+    \caption{Prototipo de alta fidelidad - Mapa interactivo y geolocalización}
+    \label{fig:prototipo-mapa}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figuras/resultados/prototipos/Prototipo de alta fidelidad4.jpeg}
+    \caption{Prototipo de alta fidelidad - Pantallas de información y contenido}
+    \label{fig:prototipo-informacion}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figuras/resultados/prototipos/Prototipo de alta fidelidad5.jpeg}
+    \caption{Prototipo de alta fidelidad - Configuraciones y opciones adicionales}
+    \label{fig:prototipo-configuraciones}
+\end{figure}
+
+\section{Aplicación implementada}
+
+Durante las fases de diseño y pruebas, la interfaz se consolidó como un componente clave en la experiencia del visitante. Las pantallas principales demostraron una estructura clara y coherente con los principios de usabilidad.
+
+\subsection{Pantalla principal e inicio}
+
+La pantalla principal proporciona acceso directo a las funcionalidades del recorrido, con una interfaz que refleja la identidad cultural del sitio arqueológico.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figuras/resultados/capturas-app/principal.jpg}
+    \caption{Pantalla principal de la aplicación con acceso a las funcionalidades principales}
+    \label{fig:pantalla-principal}
+\end{figure}
+
+\subsection{Instrucciones y términos de uso}
+
+El flujo de onboarding incluye instrucciones claras y términos y condiciones que facilitan la comprensión del funcionamiento de la aplicación.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figuras/resultados/capturas-app/instrucciones.jpg}
+    \caption{Pantalla de instrucciones para el uso de la aplicación}
+    \label{fig:instrucciones}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figuras/resultados/capturas-app/terminos y condiciones.jpg}
+    \caption{Pantalla de términos y condiciones}
+    \label{fig:terminos-condiciones}
+\end{figure}
+
+\subsection{Modos de recorrido}
+
+Los modos de recorrido —"Tour Guiado" y "Tour Libre"— respondieron adecuadamente a las diferentes preferencias de exploración del usuario, brindando tanto estructura como libertad de descubrimiento.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figuras/resultados/capturas-app/inicio de recorrido.jpg}
+    \caption{Pantalla de inicio de recorrido con opciones de navegación}
+    \label{fig:inicio-recorrido}
+\end{figure}
+
+\subsection{Integración de realidad aumentada}
+
+En cuanto a la integración de la RA, los modelos tridimensionales de los montículos (como los identificados C-II-3 y C-II-5) lograron representar de forma intuitiva las estructuras arqueológicas, permitiendo visualizar reconstrucciones volumétricas sobre el entorno real.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figuras/resultados/capturas-app/poi de referencia.jpg}
+    \caption{Vista de realidad aumentada mostrando punto de interés arqueológico}
+    \label{fig:poi-referencia1}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figuras/resultados/capturas-app/poi de referencia 02.jpg}
+    \caption{Vista alternativa de punto de interés con información contextual}
+    \label{fig:poi-referencia2}
+\end{figure}
+
+\subsection{Contenido informativo y educativo}
+
+El botón de información asociado a cada punto de interés permitió acceder a fichas arqueológicas detalladas que incluían historia, características y significado cultural, reforzando la conexión entre la tecnología y la educación patrimonial.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figuras/resultados/capturas-app/informacion de monticulo.jpg}
+    \caption{Pantalla de información detallada de montículo arqueológico}
+    \label{fig:informacion-monticulo}
+\end{figure}
+
+\subsection{Navegación y orientación espacial}
+
+La incorporación de mapas interactivos con geolocalización facilitó la orientación espacial dentro del parque, guiando al usuario hacia los puntos de interés mediante indicadores visuales y mensajes contextuales.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figuras/resultados/capturas-app/ultimo poi.jpg}
+    \caption{Pantalla final del recorrido mostrando último punto de interés}
+    \label{fig:ultimo-poi}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figuras/resultados/capturas-app/retorno al punto de inicio.jpg}
+    \caption{Pantalla de retorno al punto de inicio del recorrido}
+    \label{fig:retorno-inicio}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{resultados/capturas-app/poi de referencia.jpg}
+    \caption{Vista de realidad aumentada mostrando punto de interés arqueológico}
+    \label{fig:poi-referencia1}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{resultados/capturas-app/poi de referencia 02.jpg}
+    \caption{Vista alternativa de punto de interés con información contextual}
+    \label{fig:poi-referencia2}
+\end{figure}
+
+\subsection{Contenido informativo y educativo}
+
+El botón de información asociado a cada punto de interés permitió acceder a fichas arqueológicas detalladas que incluían historia, características y significado cultural, reforzando la conexión entre la tecnología y la educación patrimonial.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{resultados/capturas-app/informacion de monticulo.jpg}
+    \caption{Pantalla de información detallada de montículo arqueológico}
+    \label{fig:informacion-monticulo}
+\end{figure}
+
+\subsection{Navegación y orientación espacial}
+
+La incorporación de mapas interactivos con geolocalización facilitó la orientación espacial dentro del parque, guiando al usuario hacia los puntos de interés mediante indicadores visuales y mensajes contextuales.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{resultados/capturas-app/ultimo poi.jpg}
+    \caption{Pantalla final del recorrido mostrando último punto de interés}
+    \label{fig:ultimo-poi}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{resultados/capturas-app/retorno al punto de inicio.jpg}
+    \caption{Pantalla de retorno al punto de inicio del recorrido}
+    \label{fig:retorno-inicio}
+\end{figure}
+
+\section{Funcionalidades implementadas}
+
+La correcta anclación de los objetos digitales mediante la API Geoespacial de ARCore evidenció un desempeño técnico estable en entornos controlados. Las funcionalidades principales incluyen:
+
+\begin{itemize}
+    \item \textbf{Navegación por realidad aumentada}: Visualización de reconstrucciones 3D de montículos arqueológicos superpuestas al entorno real
+    \item \textbf{Sistema de geolocalización}: Posicionamiento preciso dentro del parque usando ARCore Geospatial API
+    \item \textbf{Modos de recorrido}: "Tour Guiado" y "Tour Libre" para diferentes preferencias de exploración
+    \item \textbf{Contenido contextual}: Fichas arqueológicas detalladas con información histórica y cultural
+    \item \textbf{Interfaz intuitiva}: Diseño centrado en el usuario con tipografía legible y paleta cromática cálida
+    \item \textbf{Sistema de notificaciones}: Avisos contextuales como "Montículo muy cerca" para orientación dinámica
+    \item \textbf{Mapas interactivos}: Orientación espacial con indicadores visuales y mensajes contextuales
+\end{itemize}
+
+\section{Pruebas de usabilidad}
+
+En las pruebas de usabilidad, los usuarios destacaron la facilidad de navegación y la claridad del flujo de interacción, lo cual confirmó la pertinencia del enfoque iterativo del diseño. Las observaciones permitieron identificar áreas de mejora, principalmente relacionadas con la precisión de los anclajes en entornos amplios y la necesidad de ampliar los contenidos multimedia, como audio o video interpretativo, para enriquecer la experiencia sensorial.
+
+\subsection{Resultados de las pruebas}
+
+Los resultados indicaron una alta aceptación de la aplicación como herramienta educativa e interpretativa. Los usuarios validaron la efectividad de:
+
+\begin{itemize}
+    \item La elección de tipografía legible y iconografía representativa del contexto cultural
+    \item La estructura clara y coherente con los principios de usabilidad
+    \item La facilidad de navegación entre diferentes secciones de la aplicación
+    \item La comprensión intuitiva de las funcionalidades de realidad aumentada
+\end{itemize}
+
+\section{Validación de objetivos}
+
+En términos generales, los resultados obtenidos validaron los objetivos planteados en el protocolo. La aplicación logró integrar eficazmente los principios de UX/UI con tecnologías emergentes, ofreciendo una experiencia inclusiva, visualmente atractiva y culturalmente significativa. Además, el proyecto demostró el potencial de la RA como medio de mediación patrimonial en Guatemala, estableciendo un precedente replicable para futuros desarrollos en otros sitios arqueológicos y museos.
+
+\subsection{Áreas de mejora identificadas}
+
+Se identificó la necesidad de optimizar el sistema para:
+\begin{itemize}
+    \item Condiciones de conectividad variables en entornos exteriores
+    \item Iluminación desigual que afecta el rendimiento de la RA
+    \item Precisión de anclajes en entornos amplios del parque
+    \item Incorporación de contenidos multimedia adicionales (audio, video interpretativo)
+\end{itemize}
