@@ -1,0 +1,78 @@
+% ============================================================================
+% packages.tex - Paquetes centralizados para la tesis
+% ============================================================================
+% Mantén aquí solo lo necesario para reducir tiempos de compilación.
+% Añade paquetes extra solo cuando realmente los uses en el texto.
+% ============================================================================
+
+% Codificación y lenguaje
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish, es-nodecimaldot, es-noquoting]{babel}
+\selectlanguage{spanish}
+
+% Matemáticas y símbolos
+\usepackage{amsmath, amssymb, amsfonts, amsthm, mathtools}
+
+% Gráficos e imágenes
+\usepackage{graphicx}
+\usepackage{float}      % para [H]
+\usepackage{subcaption}
+\usepackage[font=small]{caption}
+\usepackage[percent]{overpic}
+\usepackage{xfrac}
+
+% Formato del documento
+\usepackage[top=1in,left=1.5in,right=1in,bottom=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{emptypage}
+\usepackage{hyphenat}
+\usepackage{chngcntr}
+\usepackage[Sonny]{fncychap}
+
+% Colores
+\usepackage{xcolor}
+\definecolor{uvg-green}{RGB}{17,71,52}
+
+% Hipervínculos y referencias
+\usepackage[hypertexnames=false,hidelinks]{hyperref}
+\usepackage{csquotes}
+
+% Bibliografía (cambiar estilo activando \usarAPA en 0-datos_estudiante.tex)
+\ifdefined\usarAPA
+	\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
+	\DeclareLanguageMapping{spanish}{spanish-apa}
+\else
+	\usepackage[backend=biber,style=ieee]{biblatex}
+\fi
+\addbibresource{bibliografia/referencias.bib}
+
+% Glosario opcional
+\ifdefined\CAPglosario
+	\usepackage[numberedsection]{glossaries}
+	\makeglossaries
+	\input{p-glosario}
+\fi
+
+% Contadores globales (figuras/tablas no reinician por capítulo)
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+\counterwithout{equation}{chapter}
+
+% Comandos personalizados
+\newcommand{\blankpage}{\newpage\thispagestyle{empty}\mbox{}\newpage}
+\newcommand{\defaultparformat}[1]{%
+	{\setlength{\parskip}{2ex}%
+     \input{#1}}%
+}
+
+% Formato de capítulos y secciones UVG (opcional)
+\ifdefined\capsecuvg
+	\renewcommand\thechapter{\Roman{chapter}}
+    \renewcommand\thesection{\Alph{section}}
+	\renewcommand\thesubsection{\arabic{subsection}}
+    \renewcommand\thesubsubsection{\alph{subsubection}}
+\fi
+
+% Ruta de gráficos
+\graphicspath{ {figuras/} }

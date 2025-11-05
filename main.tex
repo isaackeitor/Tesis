@@ -1,0 +1,397 @@
+% ============================================================================
+% main.tex - Archivo principal de la tesis (Estructura reorganizada)
+% ============================================================================
+% Se pre-carga la información del estudiante para poder emplear el macro de
+% selección de versión (digital o impresa)
+\input{0-datos_estudiante}
+
+\ifdefined\printver
+    \documentclass[11pt, letterpaper, twoside, openright]{report}
+\else
+    \documentclass[11pt, letterpaper]{report}
+\fi
+
+\title{Plantilla para Trabajos de Graduación UVG - Versión Reorganizada}
+\author{Universidad del Valle de Guatemala}
+\date{\today}
+
+% Información del estudiante y opciones adicionales
+\input{0-datos_estudiante}
+\input{1-opciones_adicionales}
+
+% ==============================================================================
+% PAQUETES CENTRALIZADOS
+% ==============================================================================
+\input{config/packages}
+
+% ==============================================================================
+% COMANDOS PERSONALIZADOS DEL USUARIO
+% ==============================================================================
+\input{2-paquetes_y_comandos_usuario}
+
+% ==============================================================================
+% CUERPO DEL TRABAJO
+% ==============================================================================
+\pagestyle{headings}
+\begin{document}
+
+% ==============================================================================
+% PORTADA
+% ==============================================================================
+\ifdefined\printver
+    \let\CAPportada\undefined
+\fi
+
+\ifdefined\CAPportada
+    \cleardoublepage\phantomsection
+	\newgeometry{left=3cm, bottom=0in, top=1in, right=3cm}
+	\pagecolor{uvg-green}
+	\thispagestyle{empty}
+
+	\color{white}
+	\noindent\hrulefill \par
+	\vspace{0.1in}
+	\noindent\begin{minipage}{\textwidth}
+	\Huge\titulotesis
+	\end{minipage}
+	\par
+	\noindent\hrulefill \par
+	\noindent
+	\LARGE \nombreestudiante
+
+	\begin{figure}[b!]
+    	\makebox[\textwidth]{
+    		\begin{overpic}[height=13.25cm]{\imagenportada}
+     		\put(63,0){\includegraphics[height=1.15in]{plantilla/fondologo_grande.png}}
+  			\put(64.5,2){\includegraphics[height=0.55in]{plantilla/logoUVGblanco.eps}}
+        	\end{overpic}
+    	}
+	\end{figure}
+	\restoregeometry
+\fi
+
+% ==============================================================================
+% PRIMERAS PÁGINAS (Carátulas más hojas de guarda)
+% ==============================================================================
+\ifdefined\CAPcaratula
+	\newpage
+    \cleardoublepage\phantomsection
+	\pagecolor{white}
+	\color{black}
+	\setcounter{page}{1}
+	\pagenumbering{roman}
+	\thispagestyle{empty}
+	\begin{center}
+		\LARGE UNIVERSIDAD DEL VALLE DE GUATEMALA\\
+		\LARGE Facultad de \uvgfacultad \\[0.75cm]
+	\end{center}
+	\begin{figure}[h]
+		\begin{center}
+		\includegraphics[height=5.5 cm]{plantilla/escudoUVGnegro.eps}
+		\vspace{0.5in}
+		\end{center}
+	\end{figure}
+	\begin{center}
+		\vfill
+		\Large \textbf{\titulotesis} \\[1cm]
+		\Large \nohyphens{Trabajo de graduación presentado por \nombreestudiante \ para optar al grado académico de Licenciado en \uvgcarrera} \\
+		\vfill
+		\large Guatemala, \\
+		\vspace{1em}
+		\anoentrega
+	\end{center}
+
+    \ifdefined\printver
+	    \blankpage
+	    \blankpage
+
+	    \newpage
+	    \cleardoublepage\phantomsection
+	    \pagecolor{white}
+    	\color{black}
+    	\setcounter{page}{1}
+    	\pagenumbering{roman}
+    	\thispagestyle{empty}
+    	\begin{center}
+    		\LARGE UNIVERSIDAD DEL VALLE DE GUATEMALA\\
+    		\LARGE Facultad de \uvgfacultad \\[0.75cm]
+    	\end{center}
+    	\begin{figure}[h]
+    		\begin{center}
+    		\includegraphics[height=5.5 cm]{plantilla/escudoUVGnegro.eps}
+    		\vspace{0.5in}
+    		\end{center}
+    	\end{figure}
+    	\begin{center}
+    		\Large \textbf{\nohyphens{\titulotesis}} \\
+    		\vfill
+    		\Large \nohyphens{Trabajo de graduación presentado por \nombreestudiante \ para optar al grado académico de Licenciado en \uvgcarrera} \\
+    		\vfill
+    		\large Guatemala, \\
+    		\vspace{1em}
+    		\anoentrega
+    	\end{center}
+    \fi
+\fi
+
+% ==============================================================================
+% HOJA DE FIRMAS
+% ==============================================================================
+\ifdefined\CAPfirmas
+	\newpage
+	\cleardoublepage\phantomsection
+	\thispagestyle{empty}
+	\vspace*{0.5in}
+	\large Vo.Bo.:\\[1cm]
+	\begin{center}
+		(f) \rule[1pt]{4 in}{1pt}\\
+		\nombreasesor
+	\end{center}
+	\vspace{1in}
+	Tribunal Examinador:\\[1cm]
+	\begin{center}
+		(f) \rule[1pt]{4 in}{1pt}\\
+		\nombreasesor \\[1in]
+		(f) \rule[1pt]{4 in}{1pt}\\
+		\nombreprimerex \\[1in]
+		(f) \rule[1pt]{4 in}{1pt}\\
+		\nombresegundoex
+	\end{center}
+	\vspace{1in}
+	Fecha de aprobación: Guatemala, \rule[1pt]{0.5 in}{1pt} de \rule[1pt]{1 in}{1pt} de \anoaprobacion.
+	\normalsize
+\fi
+
+% Comentar para formato estilo libro en la numeración de páginas
+\pagestyle{plain}
+
+% ==============================================================================
+% CONTENIDO DEL TRABAJO
+% ==============================================================================
+% PREFACIO
+\ifdefined\CAPprefacio
+	\cleardoublepage\phantomsection
+    \chapter*{Prefacio}
+    \ifdefined\parpordefecto
+    	\defaultparformat{a-prefacio}
+    \else
+    	\input{a-prefacio}
+    \fi
+    \addcontentsline{toc}{chapter}{Prefacio}
+\fi
+
+% ÍNDICE GENERAL
+\ifdefined\CAPindice
+	\cleardoublepage\phantomsection
+	\renewcommand{\contentsname}{Índice}
+    \pdfbookmark{\contentsname}{toc}
+	\tableofcontents
+\fi
+
+% LISTADO DE FIGURAS
+\ifdefined\CAPfiguras
+	\cleardoublepage\phantomsection
+	\renewcommand{\listfigurename}{Lista de figuras}
+	\listoffigures
+	\addcontentsline{toc}{chapter}{Lista de figuras}
+\fi
+
+% LISTADO DE CUADROS
+\ifdefined\CAPcuadros
+	\cleardoublepage\phantomsection
+	\renewcommand{\listtablename}{Lista de cuadros}
+	\listoftables
+	\addcontentsline{toc}{chapter}{Lista de cuadros}
+\fi
+
+% RESUMEN
+\ifdefined\CAPresumen
+	\cleardoublepage\phantomsection
+	\chapter*{Resumen}
+	\ifdefined\parpordefecto
+		\defaultparformat{b-resumen}
+	\else
+		\input{b-resumen}
+	\fi
+	\addcontentsline{toc}{chapter}{Resumen}
+\fi
+
+% ABSTRACT
+\ifdefined\CAPabstract
+	\cleardoublepage\phantomsection
+	\chapter*{Abstract}
+	\ifdefined\parpordefecto
+		\defaultparformat{c-abstract}
+	\else
+		\input{c-abstract}
+	\fi
+	\addcontentsline{toc}{chapter}{Abstract}
+\fi
+
+% ==============================================================================
+% CAPÍTULOS PRINCIPALES (Estructura reorganizada en chapters/)
+% ==============================================================================
+% INTRODUCCIÓN
+\ifdefined\CAPintroduccion
+	\newpage
+	\cleardoublepage
+	\pagenumbering{arabic}
+	\setcounter{page}{1}
+	\chapter{Introducción}
+	\ifdefined\parpordefecto
+		\defaultparformat{chapters/01_introduccion}
+	\else
+		\input{chapters/01_introduccion}
+	\fi
+\fi
+
+% ANTECEDENTES
+\ifdefined\CAPantecedentes
+	\newpage
+	\chapter{Antecedentes}
+	\ifdefined\parpordefecto
+    	\defaultparformat{chapters/02_antecedentes}
+    \else
+    	\input{chapters/02_antecedentes}
+    \fi
+\fi
+
+% JUSTIFICACIÓN
+\ifdefined\CAPjustificacion
+	\newpage
+	\chapter{Justificación}
+	\ifdefined\parpordefecto
+		\defaultparformat{chapters/03_justificacion}
+	\else
+		\input{chapters/03_justificacion}
+	\fi
+\fi
+
+% OBJETIVOS
+\ifdefined\CAPobjetivos
+	\newpage
+	\chapter{Objetivos}
+	\ifdefined\parpordefecto
+		\defaultparformat{chapters/04_objetivos}
+	\else
+		\input{chapters/04_objetivos}
+	\fi
+\fi
+
+% ALCANCE
+\ifdefined\CAPalcance
+	\newpage
+	\chapter{Alcance}
+	\ifdefined\parpordefecto
+    	\defaultparformat{chapters/05_alcance}
+    \else
+    	\input{chapters/05_alcance}
+    \fi
+\fi
+
+% MARCO TEÓRICO
+\ifdefined\CAPmarcoteorico
+	\newpage
+	\chapter{Marco teórico}
+	\ifdefined\parpordefecto
+		\defaultparformat{chapters/06_marco_teorico}
+	\else
+		\input{chapters/06_marco_teorico}
+	\fi
+\fi
+
+% METODOLOGÍA
+\ifdefined\CAPmetodologia
+	\newpage
+	\chapter{Metodología}
+	\ifdefined\parpordefecto
+		\defaultparformat{chapters/07_metodologia}
+	\else
+		\input{chapters/07_metodologia}
+	\fi
+\fi
+
+% RESULTADOS
+\ifdefined\CAPresultados
+	\newpage
+	\chapter{Resultados}
+	\ifdefined\parpordefecto
+		\defaultparformat{chapters/08_resultados}
+	\else
+		\input{chapters/08_resultados}
+	\fi
+\fi
+
+% ANÁLISIS DE RESULTADOS
+\ifdefined\CAPanalisisderesultado
+	\newpage
+	\chapter{Análisis de resultados}
+	\ifdefined\parpordefecto
+		\defaultparformat{chapters/09_analisis_resultados}
+	\else
+		\input{chapters/09_analisis_resultados}
+	\fi
+\fi
+
+% DISCUSIÓN DE RESULTADOS
+\ifdefined\CAPdiscusionderesultado
+	\newpage
+	\chapter{Discusión de resultados}
+	\ifdefined\parpordefecto
+		\defaultparformat{chapters/10_discusion_resultados}
+	\else
+		\input{chapters/10_discusion_resultados}
+	\fi
+\fi
+
+% CONCLUSIONES
+\ifdefined\CAPconclusiones
+	\newpage
+	\chapter{Conclusiones}
+	\ifdefined\parpordefecto
+		\defaultparformat{chapters/11_conclusiones}
+	\else
+		\input{chapters/11_conclusiones}
+	\fi
+\fi
+
+% RECOMENDACIONES
+\ifdefined\CAPrecomendaciones
+	\newpage
+	\chapter{Recomendaciones}
+	\ifdefined\parpordefecto
+		\defaultparformat{chapters/12_recomendaciones}
+	\else
+		\input{chapters/12_recomendaciones}
+	\fi
+\fi
+
+% ==============================================================================
+% SECCIONES FINALES
+% ==============================================================================
+% BIBLIOGRAFÍA
+\ifdefined\CAPbibliografia
+	\newpage
+	\cleardoublepage\phantomsection
+	\chapter{\bibname}
+	\printbibliography[heading=none]
+\fi
+
+% ANEXOS
+\ifdefined\CAPanexos
+	\newpage
+	\chapter{Anexos}
+	\ifdefined\parpordefecto
+		\defaultparformat{chapters/anexos}
+	\else
+		\input{chapters/anexos}
+	\fi
+\fi
+
+% GLOSARIO
+\ifdefined\CAPglosario
+	\newpage
+	\printglossary
+\fi
+
+\end{document}

@@ -8,46 +8,47 @@ El desarrollo e implementación de la aplicación de recorrido con Realidad Aume
 
 Durante las fases de diseño se desarrollaron prototipos detallados que definieron la estructura visual y funcional de la aplicación. Estos prototipos sirvieron como base para la implementación técnica y permitieron validar las decisiones de diseño antes del desarrollo.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{figuras/resultados/prototipos/Prototipo de alta fidelidad.jpeg}
-    \caption{Prototipo de alta fidelidad - Pantallas principales de la aplicación}
-    \label{fig:prototipo-principal}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth,height=0.25\textheight,keepaspectratio]{figuras/resultados/prototipos/Prototipo inicial.jpeg}
+        \caption{Pantalla principal}
+        \label{fig:prototipo-principal}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth,height=0.25\textheight,keepaspectratio]{figuras/resultados/prototipos/Prototipo inicial instrucciones uso.jpeg}
+        \caption{Instrucciones de uso}
+        \label{fig:prototipo-instrucciones}
+    \end{subfigure}
+
+    \vspace{0.3cm}
+
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth,height=0.25\textheight,keepaspectratio]{figuras/resultados/prototipos/Prototipo inicial terminos.jpeg}
+        \caption{Términos y condiciones}
+        \label{fig:prototipo-terminos}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth,height=0.25\textheight,keepaspectratio]{figuras/resultados/prototipos/Prototipo inicial vista tour.jpeg}
+        \caption{Vista de recorrido}
+        \label{fig:prototipo-tour}
+    \end{subfigure}
+
+    \caption{Prototipos de alta fidelidad desarrollados para la aplicación}
+    \label{fig:prototipos-alta-fidelidad}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{figuras/resultados/prototipos/Prototipo de alta fidelidad1.jpeg}
-    \caption{Prototipo de alta fidelidad - Flujo de navegación y menús}
-    \label{fig:prototipo-navegacion}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.8\textwidth]{figuras/resultados/prototipos/Prototipo de alta fidelidad2.jpeg}
-    \caption{Prototipo de alta fidelidad - Interfaz de realidad aumentada}
-    \label{fig:prototipo-ar}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.8\textwidth]{figuras/resultados/prototipos/Prototipo de alta fidelidad3.jpeg}
+    \includegraphics[width=0.7\textwidth]{figuras/resultados/prototipos/Prototipo de alta fidelidad3.jpeg}
     \caption{Prototipo de alta fidelidad - Mapa interactivo y geolocalización}
     \label{fig:prototipo-mapa}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.8\textwidth]{figuras/resultados/prototipos/Prototipo de alta fidelidad4.jpeg}
-    \caption{Prototipo de alta fidelidad - Pantallas de información y contenido}
-    \label{fig:prototipo-informacion}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.8\textwidth]{figuras/resultados/prototipos/Prototipo de alta fidelidad5.jpeg}
-    \caption{Prototipo de alta fidelidad - Configuraciones y opciones adicionales}
-    \label{fig:prototipo-configuraciones}
 \end{figure}
 
 \section{Aplicación implementada}
@@ -58,130 +59,302 @@ Durante las fases de diseño y pruebas, la interfaz se consolidó como un compon
 
 La pantalla principal proporciona acceso directo a las funcionalidades del recorrido, con una interfaz que refleja la identidad cultural del sitio arqueológico.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.6\textwidth]{figuras/resultados/capturas-app/principal.jpg}
+    \includegraphics[width=0.5\textwidth]{figuras/resultados/capturas-app/principal.jpg}
     \caption{Pantalla principal de la aplicación con acceso a las funcionalidades principales}
     \label{fig:pantalla-principal}
 \end{figure}
 
 \subsection{Instrucciones y términos de uso}
 
-El flujo de onboarding incluye instrucciones claras y términos y condiciones que facilitan la comprensión del funcionamiento de la aplicación.
+El flujo de onboarding incluye instrucciones claras sobre el uso de la aplicación, controles de realidad aumentada y términos y condiciones que facilitan la comprensión del funcionamiento.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.6\textwidth]{figuras/resultados/capturas-app/instrucciones.jpg}
-    \caption{Pantalla de instrucciones para el uso de la aplicación}
-    \label{fig:instrucciones}
-\end{figure}
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/resultados/capturas-app/instrucciones.jpg}
+        \caption{Instrucciones generales}
+        \label{fig:instrucciones}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/resultados/capturas-app/instruccionescontroles.jpeg}
+        \caption{Controles de AR}
+        \label{fig:instrucciones-controles}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/resultados/capturas-app/terminos y condiciones.jpg}
+        \caption{Términos y condiciones}
+        \label{fig:terminos-condiciones}
+    \end{subfigure}
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.6\textwidth]{figuras/resultados/capturas-app/terminos y condiciones.jpg}
-    \caption{Pantalla de términos y condiciones}
-    \label{fig:terminos-condiciones}
+    \caption{Pantallas de instrucciones y términos de uso de la aplicación}
+    \label{fig:onboarding}
 \end{figure}
 
 \subsection{Modos de recorrido}
 
 Los modos de recorrido —"Tour Guiado" y "Tour Libre"— respondieron adecuadamente a las diferentes preferencias de exploración del usuario, brindando tanto estructura como libertad de descubrimiento.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.6\textwidth]{figuras/resultados/capturas-app/inicio de recorrido.jpg}
-    \caption{Pantalla de inicio de recorrido con opciones de navegación}
-    \label{fig:inicio-recorrido}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/resultados/capturas-app/inicio de recorrido.jpg}
+        \caption{Pantalla de inicio de recorrido}
+        \label{fig:inicio-recorrido}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/resultados/capturas-app/infoinicio.jpeg}
+        \caption{Información inicial del recorrido}
+        \label{fig:info-inicio}
+    \end{subfigure}
+
+    \caption{Pantallas de modos de recorrido}
+    \label{fig:modos-recorrido}
 \end{figure}
 
 \subsection{Integración de realidad aumentada}
 
-En cuanto a la integración de la RA, los modelos tridimensionales de los montículos (como los identificados C-II-3 y C-II-5) lograron representar de forma intuitiva las estructuras arqueológicas, permitiendo visualizar reconstrucciones volumétricas sobre el entorno real.
+La integración de la RA permitió visualizar modelos tridimensionales de los montículos arqueológicos superpuestos al entorno real. A continuación se presentan visualizaciones de diversos montículos del parque.
 
-\begin{figure}[h]
+\subsubsection{Montículo 3}
+
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.7\textwidth]{figuras/resultados/capturas-app/poi de referencia.jpg}
-    \caption{Vista de realidad aumentada mostrando punto de interés arqueológico}
-    \label{fig:poi-referencia1}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/resultados/capturas-app/monticulo3.jpg}
+        \caption{Vista AR del Montículo 3}
+        \label{fig:monticulo3-ar}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/resultados/capturas-app/infomonticulo3.jpg}
+        \caption{Información del Montículo 3}
+        \label{fig:monticulo3-info}
+    \end{subfigure}
+
+    \caption{Montículo 3 - Visualización AR e información}
+    \label{fig:monticulo3}
 \end{figure}
 
-\begin{figure}[h]
+\subsubsection{Montículo 5}
+
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.7\textwidth]{figuras/resultados/capturas-app/poi de referencia 02.jpg}
-    \caption{Vista alternativa de punto de interés con información contextual}
-    \label{fig:poi-referencia2}
+    \includegraphics[width=0.5\textwidth]{figuras/resultados/capturas-app/infomonticulo5.jpg}
+    \caption{Información detallada del Montículo 5}
+    \label{fig:monticulo5-info}
+\end{figure}
+
+\subsubsection{Montículo 6}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figuras/resultados/capturas-app/infomonticulo6.jpg}
+    \caption{Información detallada del Montículo 6}
+    \label{fig:monticulo6-info}
+\end{figure}
+
+\subsubsection{Montículo 7}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/resultados/capturas-app/monticulo7.jpg}
+        \caption{Vista AR 1}
+        \label{fig:monticulo7-ar1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/resultados/capturas-app/monticulo7_2.jpg}
+        \caption{Vista AR 2}
+        \label{fig:monticulo7-ar2}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/resultados/capturas-app/infomonticulo7.jpg}
+        \caption{Información}
+        \label{fig:monticulo7-info}
+    \end{subfigure}
+
+    \caption{Montículo 7 - Múltiples vistas AR e información}
+    \label{fig:monticulo7}
+\end{figure}
+
+\subsubsection{Montículo 8}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figuras/resultados/capturas-app/infomonticulo8.jpg}
+    \caption{Información detallada del Montículo 8}
+    \label{fig:monticulo8-info}
+\end{figure}
+
+\subsubsection{Montículo 12}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/resultados/capturas-app/monticulo12.jpg}
+        \caption{Vista AR del Montículo 12}
+        \label{fig:monticulo12-ar}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/resultados/capturas-app/infomonticulo12.jpg}
+        \caption{Información del Montículo 12}
+        \label{fig:monticulo12-info}
+    \end{subfigure}
+
+    \caption{Montículo 12 - Visualización AR e información}
+    \label{fig:monticulo12}
+\end{figure}
+
+\subsubsection{Montículo 13}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/resultados/capturas-app/monticulo13.jpg}
+        \caption{Vista AR del Montículo 13}
+        \label{fig:monticulo13-ar}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/resultados/capturas-app/infomonticulo13.jpg}
+        \caption{Información del Montículo 13}
+        \label{fig:monticulo13-info}
+    \end{subfigure}
+
+    \caption{Montículo 13 - Visualización AR e información}
+    \label{fig:monticulo13}
+\end{figure}
+
+\subsubsection{Montículo 14}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/resultados/capturas-app/monticulo14.jpg}
+        \caption{Vista AR del Montículo 14}
+        \label{fig:monticulo14-ar}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/resultados/capturas-app/infomonticulo14.jpg}
+        \caption{Información del Montículo 14}
+        \label{fig:monticulo14-info}
+    \end{subfigure}
+
+    \caption{Montículo 14 - Visualización AR e información}
+    \label{fig:monticulo14}
+\end{figure}
+
+\subsubsection{Estructura E y Acrópolis}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/resultados/capturas-app/Estructurae.jpg}
+        \caption{Vista AR Estructura E}
+        \label{fig:estructurae-ar}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/resultados/capturas-app/infoestructurae.jpg}
+        \caption{Información Estructura E}
+        \label{fig:estructurae-info}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/resultados/capturas-app/infoacropolis.jpg}
+        \caption{Información Acrópolis}
+        \label{fig:acropolis-info}
+    \end{subfigure}
+
+    \caption{Estructura E y Acrópolis - Visualización AR e información}
+    \label{fig:estructurae-acropolis}
+\end{figure}
+
+\subsection{Puntos de interés adicionales}
+
+La aplicación incluye puntos de interés de referencia que ayudan al usuario a orientarse durante el recorrido.
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/resultados/capturas-app/poi de referencia.jpg}
+        \caption{Vista de punto de interés de referencia}
+        \label{fig:poi-referencia1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/resultados/capturas-app/poi de referencia 02.jpg}
+        \caption{Vista alternativa de punto de interés}
+        \label{fig:poi-referencia2}
+    \end{subfigure}
+
+    \caption{Puntos de interés de referencia para orientación}
+    \label{fig:pois-referencia}
 \end{figure}
 
 \subsection{Contenido informativo y educativo}
 
-El botón de información asociado a cada punto de interés permitió acceder a fichas arqueológicas detalladas que incluían historia, características y significado cultural, reforzando la conexión entre la tecnología y la educación patrimonial.
+El botón de información asociado a cada punto de interés permitió acceder a fichas arqueológicas detalladas que incluyen historia, características y significado cultural, reforzando la conexión entre la tecnología y la educación patrimonial.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.6\textwidth]{figuras/resultados/capturas-app/informacion de monticulo.jpg}
-    \caption{Pantalla de información detallada de montículo arqueológico}
+    \includegraphics[width=0.5\textwidth]{figuras/resultados/capturas-app/informacion de monticulo.jpg}
+    \caption{Ejemplo de pantalla de información detallada de montículo arqueológico}
     \label{fig:informacion-monticulo}
 \end{figure}
 
-\subsection{Navegación y orientación espacial}
+\subsection{Navegación y finalización de recorrido}
 
 La incorporación de mapas interactivos con geolocalización facilitó la orientación espacial dentro del parque, guiando al usuario hacia los puntos de interés mediante indicadores visuales y mensajes contextuales.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.6\textwidth]{figuras/resultados/capturas-app/ultimo poi.jpg}
-    \caption{Pantalla final del recorrido mostrando último punto de interés}
-    \label{fig:ultimo-poi}
-\end{figure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/resultados/capturas-app/ultimo poi.jpg}
+        \caption{Pantalla del último punto de interés}
+        \label{fig:ultimo-poi}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/resultados/capturas-app/retorno al punto de inicio.jpg}
+        \caption{Pantalla de retorno al inicio}
+        \label{fig:retorno-inicio}
+    \end{subfigure}
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.6\textwidth]{figuras/resultados/capturas-app/retorno al punto de inicio.jpg}
-    \caption{Pantalla de retorno al punto de inicio del recorrido}
-    \label{fig:retorno-inicio}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.7\textwidth]{resultados/capturas-app/poi de referencia.jpg}
-    \caption{Vista de realidad aumentada mostrando punto de interés arqueológico}
-    \label{fig:poi-referencia1}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.7\textwidth]{resultados/capturas-app/poi de referencia 02.jpg}
-    \caption{Vista alternativa de punto de interés con información contextual}
-    \label{fig:poi-referencia2}
-\end{figure}
-
-\subsection{Contenido informativo y educativo}
-
-El botón de información asociado a cada punto de interés permitió acceder a fichas arqueológicas detalladas que incluían historia, características y significado cultural, reforzando la conexión entre la tecnología y la educación patrimonial.
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.6\textwidth]{resultados/capturas-app/informacion de monticulo.jpg}
-    \caption{Pantalla de información detallada de montículo arqueológico}
-    \label{fig:informacion-monticulo}
-\end{figure}
-
-\subsection{Navegación y orientación espacial}
-
-La incorporación de mapas interactivos con geolocalización facilitó la orientación espacial dentro del parque, guiando al usuario hacia los puntos de interés mediante indicadores visuales y mensajes contextuales.
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.6\textwidth]{resultados/capturas-app/ultimo poi.jpg}
-    \caption{Pantalla final del recorrido mostrando último punto de interés}
-    \label{fig:ultimo-poi}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.6\textwidth]{resultados/capturas-app/retorno al punto de inicio.jpg}
-    \caption{Pantalla de retorno al punto de inicio del recorrido}
-    \label{fig:retorno-inicio}
+    \caption{Navegación y finalización del recorrido}
+    \label{fig:finalizacion-recorrido}
 \end{figure}
 
 \section{Funcionalidades implementadas}
@@ -189,40 +362,64 @@ La incorporación de mapas interactivos con geolocalización facilitó la orient
 La correcta anclación de los objetos digitales mediante la API Geoespacial de ARCore evidenció un desempeño técnico estable en entornos controlados. Las funcionalidades principales incluyen:
 
 \begin{itemize}
-    \item \textbf{Navegación por realidad aumentada}: Visualización de reconstrucciones 3D de montículos arqueológicos superpuestas al entorno real
+    \item \textbf{Navegación por realidad aumentada}: Visualización de reconstrucciones 3D de 11 montículos arqueológicos superpuestas al entorno real
     \item \textbf{Sistema de geolocalización}: Posicionamiento preciso dentro del parque usando ARCore Geospatial API
     \item \textbf{Modos de recorrido}: "Tour Guiado" y "Tour Libre" para diferentes preferencias de exploración
-    \item \textbf{Contenido contextual}: Fichas arqueológicas detalladas con información histórica y cultural
-    \item \textbf{Interfaz intuitiva}: Diseño centrado en el usuario con tipografía legible y paleta cromática cálida
-    \item \textbf{Sistema de notificaciones}: Avisos contextuales como "Montículo muy cerca" para orientación dinámica
+    \item \textbf{Contenido contextual}: Fichas arqueológicas detalladas con información histórica y cultural de cada montículo
+    \item \textbf{Interfaz intuitiva}: Diseño centrado en el usuario con tipografía legible y paleta cromática inspirada en tonos arqueológicos
+    \item \textbf{Sistema de proximidad}: Indicadores de distancia con estados "visible", "cerca" y "muy cerca"
     \item \textbf{Mapas interactivos}: Orientación espacial con indicadores visuales y mensajes contextuales
+    \item \textbf{Manipulación de modelos 3D}: Gestos táctiles para zoom (pinch) y rotación (swipe) de estructuras
 \end{itemize}
 
-\section{Pruebas de usabilidad}
+\section{Resultados de pruebas de usabilidad}
 
-En las pruebas de usabilidad, los usuarios destacaron la facilidad de navegación y la claridad del flujo de interacción, lo cual confirmó la pertinencia del enfoque iterativo del diseño. Las observaciones permitieron identificar áreas de mejora, principalmente relacionadas con la precisión de los anclajes en entornos amplios y la necesidad de ampliar los contenidos multimedia, como audio o video interpretativo, para enriquecer la experiencia sensorial.
+Se realizaron pruebas de usabilidad con 17 participantes para evaluar la efectividad del diseño implementado. Los resultados obtenidos se presentan a continuación.
 
-\subsection{Resultados de las pruebas}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{figuras/resultados/resultados/resultados 1.png}
+    \caption{Resultados de pruebas de usabilidad - Métricas de facilidad de uso}
+    \label{fig:resultados-usabilidad-1}
+\end{figure}
 
-Los resultados indicaron una alta aceptación de la aplicación como herramienta educativa e interpretativa. Los usuarios validaron la efectividad de:
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{figuras/resultados/resultados/resultados 2.png}
+    \caption{Resultados de pruebas de usabilidad - Evaluación de interfaz y navegación}
+    \label{fig:resultados-usabilidad-2}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{figuras/resultados/resultados/resultados 3.png}
+    \caption{Resultados de pruebas de usabilidad - Calidad visual y valor educativo}
+    \label{fig:resultados-usabilidad-3}
+\end{figure}
+
+\subsection{Hallazgos principales}
+
+En las pruebas de usabilidad, los usuarios destacaron la facilidad de navegación y la claridad del flujo de interacción, lo cual confirmó la pertinencia del enfoque iterativo del diseño. Los usuarios validaron la efectividad de:
 
 \begin{itemize}
     \item La elección de tipografía legible y iconografía representativa del contexto cultural
     \item La estructura clara y coherente con los principios de usabilidad
     \item La facilidad de navegación entre diferentes secciones de la aplicación
     \item La comprensión intuitiva de las funcionalidades de realidad aumentada
+    \item El valor educativo del contenido arqueológico presentado
+\end{itemize}
+
+Las observaciones permitieron identificar áreas de mejora, principalmente relacionadas con:
+
+\begin{itemize}
+    \item La utilidad percibida del mapa en miniatura (64.7\%, por debajo del umbral de 70\%)
+    \item La claridad geométrica y proporciones de los modelos 3D (35.3\% evaluación positiva)
+    \item La necesidad de ampliar los contenidos multimedia, como audio o video interpretativo
+    \item La precisión de los anclajes AR en entornos amplios
 \end{itemize}
 
 \section{Validación de objetivos}
 
-En términos generales, los resultados obtenidos validaron los objetivos planteados en el protocolo. La aplicación logró integrar eficazmente los principios de UX/UI con tecnologías emergentes, ofreciendo una experiencia inclusiva, visualmente atractiva y culturalmente significativa. Además, el proyecto demostró el potencial de la RA como medio de mediación patrimonial en Guatemala, estableciendo un precedente replicable para futuros desarrollos en otros sitios arqueológicos y museos.
+En términos generales, los resultados obtenidos validaron los objetivos planteados en el proyecto. La aplicación logró integrar eficazmente los principios de UX/UI con tecnologías de realidad aumentada, ofreciendo una experiencia inclusiva, visualmente atractiva y culturalmente significativa.
 
-\subsection{Áreas de mejora identificadas}
-
-Se identificó la necesidad de optimizar el sistema para:
-\begin{itemize}
-    \item Condiciones de conectividad variables en entornos exteriores
-    \item Iluminación desigual que afecta el rendimiento de la RA
-    \item Precisión de anclajes en entornos amplios del parque
-    \item Incorporación de contenidos multimedia adicionales (audio, video interpretativo)
-\end{itemize}
+Los promedios de facilidad de uso entre 4.27 y 4.77 en escala Likert (1-5) superaron el umbral establecido de 4.0, y la tasa de completitud del 100\% en tareas críticas demostró la efectividad del diseño centrado en el usuario. Además, el proyecto demostró el potencial de la RA como medio de mediación patrimonial en Guatemala, estableciendo un precedente replicable para futuros desarrollos en otros sitios arqueológicos y museos.

@@ -1,0 +1,103 @@
+% !TEX root = z-main.tex
+
+\section{Alcance del proyecto}
+
+El presente proyecto abarcó el diseño, desarrollo e implementación de una aplicación móvil de recorrido con Realidad Aumentada (RA) para el Parque Arqueológico Kaminaljuyú, con énfasis en la experiencia de usuario (UX) y la interfaz de usuario (UI). El alcance incluyó específicamente:
+
+\begin{itemize}
+    \item \textbf{Investigación y análisis de usuarios}: Estudio de necesidades, comportamientos y expectativas de visitantes potenciales del parque mediante observaciones de campo y entrevistas semiestructuradas con diversos perfiles de usuarios.
+
+    \item \textbf{Diseño iterativo de prototipos}: Desarrollo de prototipos de baja y alta fidelidad utilizando herramientas de diseño digital, con múltiples iteraciones basadas en retroalimentación de usuarios, incluyendo wireframes, flujos de navegación y especificaciones visuales completas.
+
+    \item \textbf{Implementación técnica para Android}: Desarrollo de aplicación móvil nativa para Android utilizando Kotlin y la API Geoespacial de ARCore para el posicionamiento de modelos 3D de estructuras arqueológicas en ubicaciones georreferenciadas del parque. La aplicación incluye 11 puntos de interés (POIs) con información histórica detallada.
+
+    \item \textbf{Sistema de recorrido guiado}: Implementación del modo ``Tour Guiado'' que ofrece un recorrido secuencial estructurado con navegación paso a paso, asistido mediante indicadores direccionales e información sobre el sistema de proximidad (estados: visible/cerca/muy cerca).
+
+    \item \textbf{Funcionalidades de navegación espacial}: Sistema de flechas direccionales en 3D para guiar al usuario hacia los montículos, integración de mapa interactivo con Google Maps mostrando posición del usuario en tiempo real, y cálculo dinámico de distancias y orientación hacia puntos de interés.
+
+    \item \textbf{Interacción con modelos 3D en AR}: Implementación de gestos táctiles para manipulación de modelos tridimensionales, incluyendo zoom mediante pinch, rotación mediante swipe, y visualización de reconstrucciones volumétricas de estructuras arqueológicas superpuestas al entorno real. Los modelos incluyen múltiples partes (techos, paredes, bases) para representar complejidad arquitectónica.
+
+    \item \textbf{Sistema de información contextual}: Diálogos informativos con contenido arqueológico, histórico y cultural de cada montículo, organizados en secciones (descripción general, historia, hallazgos arqueológicos, función original), con galerías de imágenes de referencia ampliables a pantalla completa.
+
+    \item \textbf{Diseño de sistema visual}: Desarrollo de paleta de colores inspirada en tonos arqueológicos (terracota, verde, oro, crema), tipografía clara y legible, iconografía contextual, y sistema de tarjetas consistente para diferentes tipos de contenido.
+
+    \item \textbf{Pruebas de usabilidad empíricas}: Evaluación con 17 usuarios reales mediante tareas predefinidas, cuestionarios con escala Likert (1-5), y preguntas de satisfacción para validar criterios de facilidad de uso, claridad de interfaz, eficiencia en tareas clave, calidad de interacción con modelos 3D y valor educativo del contenido.
+
+    \item \textbf{Análisis de resultados UX/UI}: Evaluación cuantitativa de métricas de usabilidad, identificación de fortalezas y áreas de mejora, comparación con objetivos establecidos, y documentación de lecciones aprendidas en el proceso iterativo de diseño.
+
+    \item \textbf{Documentación técnica y de diseño}: Elaboración de guía de implementación con mejores prácticas de UX/UI aplicadas al contexto de patrimonio cultural con tecnologías de RA, incluyendo recomendaciones específicas, decisiones de diseño justificadas, y estrategias de escalabilidad para aplicación en otros sitios arqueológicos.
+\end{itemize}
+
+\section{Limitaciones}
+
+El proyecto \textbf{no incluyó} los siguientes aspectos, debido a restricciones de tiempo, recursos técnicos, alcance académico o consideraciones de viabilidad:
+
+\begin{itemize}
+    \item \textbf{Desarrollo multiplataforma}: La aplicación se implementó exclusivamente para dispositivos Android compatibles con ARCore (versión mínima Android 7.0). No se contempló desarrollo para iOS (iPhone/iPad) ni para otras plataformas móviles, lo cual limita el alcance de la audiencia potencial.
+
+    \item \textbf{Contenido multimedia avanzado}: No se incluyeron elementos como narración de audio guiado, videos de reconstrucción histórica, animaciones de personajes mayas en 3D, o recreaciones sonoras ambientales, debido a limitaciones de recursos de producción audiovisual y consideraciones de tamaño de la aplicación.
+
+    \item \textbf{Modelado 3D arqueológico exhaustivo}: Se trabajó con modelos tridimensionales de complejidad moderada basados en referencias bibliográficas. No se realizó levantamiento fotogramétrico completo del sitio, escaneo LiDAR, ni modelado científico de estructuras internas o subestructuras arqueológicas enterradas.
+
+    \item \textbf{Sistema de gamificación}: No se implementaron mecánicas de juego como logros desbloqueables, puntajes, retos educativos, sistemas de recompensas, o elementos competitivos, aunque se reconoce su potencial para aumentar el engagement de visitantes más jóvenes y la retención de información.
+
+    \item \textbf{Pruebas in situ extensivas en el parque}: Las pruebas de usabilidad se realizaron en las instalaciones de la Universidad del Valle de Guatemala por razones de practicidad logística, seguridad y control de variables. No se realizaron pruebas prolongadas directamente en el Parque Arqueológico Kaminaljuyú, lo cual pudo limitar la validación de aspectos contextuales como conectividad variable, iluminación solar cambiante, condiciones climáticas adversas, o recorridos de larga duración (más de 60 minutos).
+
+    \item \textbf{Backend y funcionalidades en línea}: La aplicación funciona de manera local sin requerir conectividad a internet durante el recorrido. No se implementó servidor backend para análisis de métricas de uso en tiempo real, sincronización de contenido actualizado, sistema de comentarios o reseñas de usuarios, ni actualización remota de información arqueológica.
+
+    \item \textbf{Accesibilidad avanzada para discapacidades}: Si bien se contemplaron principios generales de usabilidad, no se implementaron características especializadas para usuarios con discapacidades visuales severas (integración con TalkBack, descripciones de audio automáticas de escenas AR), auditivas (subtítulos automáticos, señales visuales para alertas sonoras), o motoras (control por voz, modos de interacción simplificados, botones de mayor tamaño).
+
+    \item \textbf{Validación arqueológica formal}: La precisión histórica y credibilidad arqueológica de los modelos 3D y del contenido textual se basó en fuentes bibliográficas existentes y consultas informales. No se llevó a cabo un proceso formal de validación con arqueólogos especializados en Kaminaljuyú, revisión por comité académico de historia maya, ni certificación institucional del contenido.
+
+    \item \textbf{Internacionalización completa}: El contenido de la aplicación se desarrolló únicamente en idioma español. No se implementó soporte multiidioma (inglés, idiomas mayas como K'iche'), sistema de cambio de idioma, ni traducción profesional de contenido arqueológico, lo cual limita la accesibilidad para turistas internacionales y comunidades indígenas locales.
+
+    \item \textbf{Análisis de impacto educativo a largo plazo}: No se realizó seguimiento longitudinal del impacto educativo de la aplicación en la comprensión histórica de los usuarios, retención de información a mediano plazo, cambio de actitudes hacia el patrimonio cultural, ni medición de visitas repetidas al parque motivadas por la aplicación.
+\end{itemize}
+
+\section{Supuestos}
+
+El desarrollo del proyecto se basó en los siguientes supuestos fundamentales:
+
+\begin{itemize}
+    \item Los usuarios objetivo poseen dispositivos móviles Android (versión 7.0 o superior) con capacidades de procesamiento gráfico adecuadas para renderizado de modelos 3D en tiempo real, sensores de cámara funcionales, GPS con precisión mínima de 5 metros, y suficiente espacio de almacenamiento (mínimo 200 MB libres).
+
+    \item Los visitantes del parque cuentan con conocimientos básicos de uso de aplicaciones móviles, incluyendo instalación desde tienda de aplicaciones, navegación mediante gestos táctiles estándar (tap, swipe, pinch), y comprensión de solicitudes de permisos de sistema (cámara, ubicación).
+
+    \item El Parque Arqueológico Kaminaljuyú permite el uso libre de dispositivos móviles durante las visitas, no existen restricciones institucionales para la captura de imágenes o video, el uso de tecnologías de realidad aumentada en el sitio es permitido, y la administración del parque apoya iniciativas educativas digitales.
+
+    \item Los modelos 3D de estructuras arqueológicas disponibles o desarrollados representan con fidelidad razonable las características volumétricas, proporciones espaciales y contexto histórico de los montículos, basándose en investigaciones arqueológicas previas, aunque no constituyan reconstrucciones científicas definitivas ni cuenten con validación formal de especialistas.
+
+    \item Las coordenadas geográficas de los montículos arqueológicos utilizadas para el posicionamiento AR son suficientemente precisas (margen de error menor a 5 metros) para proporcionar una experiencia de usuario satisfactoria, permitiendo que los modelos 3D aparezcan en ubicaciones visualmente coherentes con las estructuras reales del parque.
+
+    \item Existe interés y disposición genuina de los visitantes potenciales para participar voluntariamente en procesos de investigación de usuarios (entrevistas, observaciones de campo) y en pruebas de usabilidad, proporcionando retroalimentación honesta, constructiva y representativa de la población objetivo.
+
+    \item Las condiciones ambientales típicas del parque (iluminación natural diurna entre 10:00-16:00 horas, ausencia de obstrucciones importantes en línea de visión, terreno relativamente plano) permiten el funcionamiento adecuado de las capacidades de seguimiento espacial, detección de planos y anclaje geoespacial de ARCore.
+
+    \item El contenido histórico, arqueológico y fotográfico integrado en la aplicación es accesible mediante fuentes públicas (libros, artículos académicos, repositorios institucionales), bibliografía académica de dominio público o con permisos educativos, o mediante colaboración con instituciones culturales, sin restricciones de derechos de autor que impidan su uso educativo no comercial.
+
+    \item Los usuarios tienen expectativas realistas sobre las capacidades de la tecnología de realidad aumentada móvil, comprenden que es una representación digital educativa (no una reconstrucción arqueológica certificada), y aceptan limitaciones técnicas como precisión GPS variable, consumo de batería elevado, y necesidad de buena iluminación.
+\end{itemize}
+
+\section{Restricciones}
+
+El proyecto operó bajo las siguientes restricciones técnicas, temporales, contextuales y de recursos:
+
+\begin{itemize}
+
+    \item \textbf{Restricción tecnológica de plataforma}: La API Geoespacial de ARCore requiere dispositivos Android con soporte específico de hardware y software, excluyendo dispositivos de gama baja (menos de 2 GB RAM), modelos anteriores a 2017, y toda la base de usuarios iOS (aproximadamente 30\% del mercado guatemalteco), reduciendo significativamente la accesibilidad universal de la solución.
+
+    \item \textbf{Restricción de conectividad}: Aunque la aplicación funciona offline durante el recorrido, la instalación inicial, descarga de modelos 3D (aproximadamente 150 MB), y potenciales actualizaciones requieren acceso a Google Play Store y conexión WiFi o datos móviles, lo cual representa una barrera para usuarios con planes de datos limitados o sin acceso regular a internet.
+
+    \item \textbf{Restricción de acceso al sitio arqueológico}: Las condiciones de acceso al Parque Arqueológico Kaminaljuyú (horarios de apertura 7:00-16:00, procedimientos de autorización para investigación, consideraciones de seguridad en zona urbana, disponibilidad de personal del parque) limitaron la frecuencia, duración y flexibilidad de visitas para observaciones de campo prolongadas, fotografía de referencia exhaustiva, pruebas in situ con usuarios, o validación contextual de funcionalidades AR. Adicionalmente, no fue posible realizar grabaciones aéreas con dron debido a que el permiso requerido tenía un costo de Q7,000.00 que excedía el presupuesto disponible.
+
+    \item \textbf{Restricción presupuestaria}: El proyecto se desarrolló sin financiamiento externo institucional, utilizando exclusivamente recursos propios del investigador (hardware personal, licencias de software educativas gratuitas, viáticos de transporte), lo cual limitó severamente la adquisición de herramientas profesionales de pago (software de modelado 3D avanzado, servicios de hosting, plataformas de testing), contratación de servicios especializados (traducción profesional, narración de audio, validación arqueológica), o realización de campañas extensivas de pruebas de usuario con incentivos para participantes.
+
+    \item \textbf{Restricción de conocimientos especializados}: El investigador-desarrollador no posee formación profesional como arqueólogo, historiador especializado en cultura maya, diseñador gráfico certificado, ni experto en accesibilidad digital, por lo cual la interpretación y presentación del contenido cultural, decisiones de diseño visual, y consideraciones de inclusividad dependieron necesariamente de fuentes secundarias, consultas informales, y no de conocimiento experto de primera mano o certificación profesional.
+
+    \item \textbf{Restricción de muestra de participantes}: El tamaño de la muestra para pruebas de usabilidad ($n=17$ usuarios) y para investigación de usuarios (número limitado de entrevistas y observaciones) estuvo restringido por disponibilidad de participantes voluntarios en contexto universitario, tiempo necesario para reclutamiento y coordinación de sesiones, capacidad logística para conducir pruebas individuales de 45-60 minutos, y limitaciones de representatividad demográfica (sesgo hacia población universitaria joven).
+
+    \item \textbf{Restricción de hardware de desarrollo}: El desarrollo se realizó con equipo personal limitado (una computadora, un dispositivo Android de pruebas), sin acceso a laboratorio de usabilidad formal, dispositivos de prueba de diferentes gamas y fabricantes, equipos de captura de video profesional, o infraestructura de testing automatizado, lo cual limitó la capacidad de validación exhaustiva en diversos contextos y configuraciones de hardware.
+
+    \item \textbf{Restricción de privacidad y permisos}: Consideraciones éticas y de privacidad limitaron la recolección de datos personales de usuarios, tracking de ubicación fuera del contexto de la app, almacenamiento de imágenes capturadas por usuarios, o implementación de analytics detallados, requiriendo aprobación de comité de ética y consentimiento informado explícito que añadió complejidad al proceso de investigación.
+\end{itemize}
+
